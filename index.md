@@ -4,34 +4,29 @@ You can use the [editor on GitHub](https://github.com/mahimak19/mahima_indiv/edi
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### 5.1 Beneficial + Harmful effects of Computing
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Drones: Fun, easy, but can be used by military
 
-```markdown
-Syntax highlighted code block
+Dopamine: Pleasure hormones, video games and social media can be addictive, constant excitement from them.
 
-# Header 1
-## Header 2
-### Header 3
+Imperative: sequencing, different decisions, like python
 
-- Bulleted
-- List
+Actions:
+1) Come up with three of your own Beneficial and corresponding Harmful Effects of Computing
 
-1. Numbered
-2. List
+Beneficial Effects of Computing: Access to a larger range of information and experiences (like video games, online websites and articles), ability to streamline certain tasks to make them easier, help and connect to people across a large distance (like across the world) and learn about their culture
+
+Harmful effects: Can be addictive (dopamine effect, Internet can be a distraction), Privacy issues can occur, Technology and AI can replace jobs done by humans (unemployment, loss of livelihood).
+
+2) Talk about dopamine issues above. Real? Parent conspiracy? Anything that is impacting your personal study and success in High School?
+
+
+
+
+
 
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mahimak19/mahima_indiv/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
