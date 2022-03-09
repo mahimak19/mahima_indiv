@@ -23,7 +23,7 @@ Harmful effects: Can be addictive (dopamine effect, Internet can be a distractio
 The dopamine problem is real. As teenagers, we constantly try to keep our minds busy with distractions like social media, tv/movies, etc, and it is easy to get addicted to these things. These short term pleasures give instant hits of dopamine, which can impact long-term goals like studying and extracurriculars. For me, scrolling on YouTube is a big distraction from completing my work in a timely manner.
 
 
-## 5.1 Digital Divide 
+## 5.2 Digital Divide 
 
 -Lack of access to technology in poorer areas, less developed areas. 
 -Demographics, geo location, socioeconomic factors
