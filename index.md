@@ -154,3 +154,4 @@ College Board Requirement: Sequencing, Selection and Iteration, name the procedu
         self._display = display
 ```
 
+Runtime Video: https://user-images.githubusercontent.com/89278005/156052527-6e146faf-1c58-48f6-a9f6-0b5f328a8edc.mov
