@@ -1,6 +1,6 @@
 # Mahima's Individual Github Pages Site Tri 3
 
-### Week 0 Individual Review Ticket: https://github.com/mahimak19/mahima_indiv/issues/1
+### Week 0 Individual Review [Ticket](https://github.com/mahimak19/mahima_indiv/issues/1)
 
 
 
