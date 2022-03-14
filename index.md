@@ -44,6 +44,398 @@ Is paper or red tape blocking digital empowerment? Are there such barriers at De
 
 Many classes still use traditional textbooks and notebooks to learn material, and it may not be as accessible or feasible to do this. For example, some classes only have the textbook at school and students have to be at school to learn the material. Students also have to carry large notebooks for some classes, where instead most work can be done online. Access to information is expanded drastically by using the internet too, which some classes may not allow. Also, Del Norte wifi blocks certain sites even though there's nothing bad in them.
 
+## TT0 Python Menu Individual Task
+
+Making a Python Menu
+
+```
+import shipbetter
+
+
+# menuy.py - function style menu
+# Imports typically listed at top
+# each import enables us to use logic that has been abstracted to other files and folders
+
+# Main list of [Prompts, Actions]
+# Two styles are supported to execute abstracted logic
+# 1. file names will be run by exec(open("filename.py").read())
+# 2. function references will be executed directly file.function()
+main_menu = [
+    ["swap", "swap2.py"],
+    ["ship", "ship.py"],
+    ["shipbetter", "shipbetter.py"]
+  
+
+    
+]
+
+# Submenu list of [Prompt, Action]
+# Works similarly to main_menu
+sub_menu = [
+    ["Factors", None],
+    ["GCD", None],
+    ["LCM", None],
+    ["Primes", None],
+]
+
+
+# Menu banner is typically defined by menu owner
+border = "=" * 25
+banner = f"\n{border}\nPlease Select An Option\n{border}"
+
+
+# def patterns_submenuc
+# using patterns_sub_menu list:
+# patterns_submenuc works similarly to menuc
+def patterns_submenuc():
+    title = "Class Submenu" + banner
+    m = questy.Menu(title, patterns_sub_menu)
+    m.menu()
+
+
+# def menu
+# using main_menu list:
+# 1. main menu and submenu reference are created [Prompts, Actions]
+# 2. menu_list is sent as parameter to menuy.menu function that has logic for menu control
+def menu():
+    title = "Function Menu" + banner
+    menu_list = main_menu.copy()
+    buildMenu(title, menu_list)
+
+
+
+# def submenu
+# using sub menu list above:
+# sub_menu works similarly to menu()
+def submenu():
+    title = "Function Submenu" + banner
+    buildMenu(title, sub_menu)
+
+
+def patterns_submenu():
+    title = "Function Submenu" + banner
+    buildMenu(title, patterns_sub_menu)
+
+
+def buildMenu(banner, options):
+    # header for menu
+    print(banner)
+    # build a dictionary from options
+    prompts = {0: ["Exit", None]}
+    for op in options:
+        index = len(prompts)
+        prompts[index] = op
+
+    # print menu or dictionary
+    for key, value in prompts.items():
+        print(key, '->', value[0])
+
+    # get user choice
+    choice = input("Type your choice> ")
+
+    # validate choice and run
+    # execute selection
+    # convert to number
+    try:
+        choice = int(choice)
+        if choice == 0:
+            # stop
+            return
+        try:
+            # try as function
+            action = prompts.get(choice)[1]
+            action()
+        except TypeError:
+            try:  # try as playground style
+                exec(open(action).read())
+            except FileNotFoundError:
+                print(f"File not found!: {action}")
+            # end function try
+        # end prompts try
+    except ValueError:
+        # not a number error
+        print(f"Not a number: {choice}")
+    except UnboundLocalError:
+        # traps all other errors
+        print(f"Invalid choice: {choice}")
+    # end validation try
+
+    buildMenu(banner, options)  # recursion, start menu over again
+
+menu()
+
+if __name__ == "__main__":
+    menu()
+```
+- The code for the menu is put into the main.py file
+- A submenu was not needed, since I put in only 2 programs
+- A series of try, except and finally statements demonstrates selection of the user, determines which program to run
+
+One of the functions we inputted is the swap function from last tri
+
+```
+x = input ("Type a number ")
+y = input ("Type another number ")
+print (x,y)
+def swap (x,y):
+    q = x
+# we set one of our variables to a temporary variable
+    x = y
+#swap the original two variables
+    y = q
+#set y equal to the temp
+
+    return x,y
+
+a,b= swap(x,y)
+print(a, b)
+
+```
+
+Ship Animation
+
+-The less efficient way is to print multiple ships in different spots and create time intervals for each one so that when code runs, the ships move like an animation
+
+```
+#prefuncy.py
+import time
+import os
+
+Color34 = "\u001b[34m"
+Color37 = "\u001b[37m"
+
+
+# As you can see, its not very optimal 
+def ship1():
+    print("    |\ ")
+    print("    |/ ")
+    print("\__ |__/ ")
+    print(" \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship2():
+    print("      |\ ")
+    print("      |/ ")
+    print("  \__ |__/ ")
+    print("   \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship3():
+    print("        |\ ")
+    print("        |/ ")
+    print("    \__ |__/ ")
+    print("     \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship4():
+    print("          |\ ")
+    print("          |/ ")
+    print("      \__ |__/ ")
+    print("       \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship5():
+    print("            |\ ")
+    print("            |/ ")
+    print("        \__ |__/ ")
+    print("         \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship6():
+    print("              |\ ")
+    print("              |/ ")
+    print("          \__ |__/ ")
+    print("           \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship7():
+    print("                |\ ")
+    print("                |/ ")
+    print("            \__ |__/ ")
+    print("             \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship8():
+    print("                  |\ ")
+    print("                  |/ ")
+    print("              \__ |__/ ")
+    print("               \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship9():
+    print("                    |\ ")
+    print("                    |/ ")
+    print("                \__ |__/ ")
+    print("                 \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship10():
+    print("                      |\ ")
+    print("                      |/ ")
+    print("                  \__ |__/ ")
+    print("                   \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship11():
+    print("                        |\ ")
+    print("                        |/ ")
+    print("                    \__ |__/ ")
+    print("                     \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship12():
+    print("                          |\ ")
+    print("                          |/ ")
+    print("                      \__ |__/ ")
+    print("                       \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship13():
+    print("                            |\ ")
+    print("                            |/ ")
+    print("                        \__ |__/ ")
+    print("                         \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship14():
+    print("                              |\ ")
+    print("                              |/ ")
+    print("                          \__ |__/ ")
+    print("                           \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship15():
+    print("                                |\ ")
+    print("                                |/ ")
+    print("                            \__ |__/ ")
+    print("                             \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship16():
+    print("                                  |\ ")
+    print("                                  |/ ")
+    print("                              \__ |__/ ")
+    print("                               \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship17():
+    print("                                    |\ ")
+    print("                                    |/ ")
+    print("                                \__ |__/ ")
+    print("                                 \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship18():
+    print("                                      |\ ")
+    print("                                      |/ ")
+    print("                                  \__ |__/ ")
+    print("                                   \____/ ")
+    print("\u001b[34m ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \u001b[37m")
+
+
+def ship19():
+    print("                                        |\ ")
+    print("                                        |/ ")
+    print("                                    \__ |__/ ")
+    print("                                     \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+def ship20():
+    print("                                          |\ ")
+    print("                                          |/ ")
+    print("                                      \__ |__/ ")
+    print("                                       \____/ ")
+    print("\u001b[34m -------------------------------------------- \u001b[37m")
+
+
+## os.system("cls")
+time.sleep(.1)
+ship1()
+time.sleep(.5)
+##os.system("cls")
+ship2()
+time.sleep(.5)
+##os.system("cls")
+ship3()
+time.sleep(.5)
+##os.system("cls")
+ship4()
+time.sleep(.5)
+##os.system("cls")
+ship5()
+time.sleep(.5)
+##os.system("cls")
+ship6()
+time.sleep(.5)
+##os.system("cls")
+ship7()
+time.sleep(.5)
+##os.system("cls")
+ship8()
+time.sleep(.5)
+##os.system("cls")
+ship9()
+time.sleep(.5)
+##os.system("cls")
+ship10()
+time.sleep(.5)
+##os.system("cls")
+ship11()
+time.sleep(.5)
+##os.system("cls")
+ship12()
+time.sleep(.5)
+##os.system("cls")
+ship13()
+time.sleep(.5)
+##os.system("cls")
+ship14()
+time.sleep(.5)
+##os.system("cls")
+ship15()
+time.sleep(.5)
+##os.system("cls")
+ship16()
+time.sleep(.5)
+##os.system("cls")
+ship17()
+time.sleep(.5)
+##os.system("cls")
+ship18()
+time.sleep(.5)
+##os.system("cls")
+ship19()
+time.sleep(.5)
+##os.system("cls")
+ship20()
+time.sleep(.5)
+##os.system("cls")
+print("or so you thought...")
+time.sleep(.5)
+##os.system("cls")
+```
+-The os.system (cls) was causing issues with runtime
+-Link to runtime: 
+
+
 
 
 ## Create Task Info
@@ -155,3 +547,5 @@ College Board Requirement: Sequencing, Selection and Iteration, name the procedu
 ```
 
 Runtime Video: https://user-images.githubusercontent.com/89278005/156052527-6e146faf-1c58-48f6-a9f6-0b5f328a8edc.mov
+
+
