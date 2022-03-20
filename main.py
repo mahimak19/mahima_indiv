@@ -1,4 +1,4 @@
-import shipbetter
+
 
 
 # menuy.py - function style menu
@@ -12,24 +12,22 @@ import shipbetter
 main_menu = [
     ["swap", "swap2.py"],
     ["ship", "ship.py"],
-    ["shipbetter", "shipbetter.py"]
-  
-
+    ["shipbetter", "shipbetter.py"],
+    ["loops", "loops.py"],
+    ["fibonacci", "fibonacci.py"]
     
+
 ]
 
 # Submenu list of [Prompt, Action]
 # Works similarly to main_menu
 sub_menu = [
-    ["Factors", None],
+    ["Recursion Fib",None],
     ["GCD", None],
     ["LCM", None],
     ["Primes", None],
 ]
 
-patterns_sub_menu = [
-    ["Patterns", None]
-]
 
 # Menu banner is typically defined by menu owner
 border = "=" * 25
