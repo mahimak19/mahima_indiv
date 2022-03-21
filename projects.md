@@ -1,5 +1,84 @@
+## TT1 Loops and Lists
+
+Hack 1: Creating the Lists
+
+-Each list has a length greater than 3
+-there are 2 lists
+-List within a list: Favorite Books
+
+```
+InfoDb = []
+# List with dictionary records placed in a list
+InfoDb.append({
+    "FirstName": "Mahima",
+    "LastName": "Krovvidy",
+    "DOB": "November 19",
+    "Email": "mahikro@gmail.com",
+    "Favorite Books":["Harry Potter and the Chamber of Secrets","One of Us Is Lying","Sherlock Holmes","Everything,Everything", "Inferno"]
+})
+InfoDb.append({
+    "FirstName": "Dora",
+    "LastName": "The Explorer",
+    "DOB": "September 40th",
+    "Email": "delicioso@swiper.com",
+    "Favorite Books":["Harry Potter and the Chamber of Secrets","One of Us Is Lying","Sherlock Holmes","Everything,Everything", "Inferno"]
+})
+```
 
 
+Hack 2: Create 3 different loops (for, while, recursive) to access information from InfoDb
+
+-For loop:
+
+```
+def for_loop():
+    for n in range(len(InfoDb)):
+        print_data(n)
+for_loop()
+#print(InfoDb[1]["FirstName"])
+```
+We defined the for loop, for each element in list, print the data, then we called the function
+
+-While loop:
+
+```
+def while_loop(n):
+    while n < len(InfoDb):
+        print_data(n)
+        n += 1
+while_loop(0)
+```
+Define the while loop, print data, add 1 to n, call the while loop with initial index 0
+
+-Recursive loop:
+
+```
+def recursive_loop(n):
+    if n < len(InfoDb):
+        print_data(n)
+        recursive_loop(n + 1)
+    return # exit condition
+recursive_loop(0)
+```
+Define recursive loop, call the same function repeatedly and add n+1. Start the loop at 0.
+
+-Fibonacci
+```
+y = int(input("How many Fibonacci? "))
+
+
+def recursion_fib(x):
+  if x <= 1:
+    return 1
+  else:
+    return(recursion_fib(x-1) + recursion_fib(x-2))
+
+
+for i in range(y):
+  fib = recursion_fib(i)
+  print(fib)
+```
+Using a recursive loop, we are able to print a series of numbers where the next number is the sum of the previous two numbers, except when x is less than or equal to 1. 
 
 ## TT0 Python Menu Individual Task
 
