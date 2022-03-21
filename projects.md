@@ -1,6 +1,5 @@
 ## TT1 Loops and Lists
-<iframe>https://replit.com/@MahimaKrovvidy/mahima_indiv-1</iframe>
-
+<iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@MahimaKrovvidy/mahima_indiv-1"></iframe>
 
 
 
