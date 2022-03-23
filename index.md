@@ -7,7 +7,7 @@
 ### Week 0 Individual Review [Ticket](https://github.com/mahimak19/mahima_indiv/issues/1)
 ### Replit [Runtime](https://replit.com/join/ehydzoosro-mahimakrovvidy)
 
-## 5.6
+## 5.6 Safe Computing
 -Describe PII you have seen on project in CompSci Principles.
 In our greet pages, people entered their names into the form and the program returned a greeting. In our sign up form for our personality parlor site, the name, email address and phone number were recorded into a spreadsheet, which is PII.
 
@@ -27,7 +27,7 @@ We opened internet ports in order to host the website, but a special network pas
 One phishing scheme I have experienced is when I got a call about the expired warranty on my vehicle, even though I have no vehicle. They wanted my insurance information, which I also did not have.
 
 
-## 5.5
+## 5.5 Legal and Ethical Concerns
 
 -When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in GitHub pages.
 
