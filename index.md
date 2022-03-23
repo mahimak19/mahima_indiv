@@ -7,6 +7,40 @@
 ### Week 0 Individual Review [Ticket](https://github.com/mahimak19/mahima_indiv/issues/1)
 ### Replit [Runtime](https://replit.com/join/ehydzoosro-mahimakrovvidy)
 
+## 5.6
+-Describe PII you have seen on project in CompSci Principles.
+In our greet pages, people entered their names into the form and the program returned a greeting. In our sign up form for our personality parlor site, the name, email address and phone number were recorded into a spreadsheet, which is PII.
+
+-What are your feelings about PII and your exposure?
+I think that certain PII is okay to be revealed, like name and email address. However, other PII like home address, phone number and names of family members are more personal, and shouldn't be given out loosely.
+
+-Describe good and bad passwords? What is another step that is used to assist in authentication.
+A bad password is using common words of phrases or sequential numbers or letters, since they can easily be figured out. A good password is using combined random words, letters, numbers and special characters to create a unique password that is hard to hack. Two-factor is ideal.
+
+-Try to describe Symmetric and Asymmetric encryption.
+Symmetric encryption is where there is only one key or code that is used to both encrypt and decrypt secret information. Asymmetric encryption is when a public key is used to encrypt a message or data, then a private key is used to decrypt it.
+
+-Provide and example of encryption we used in deployment.
+We opened internet ports in order to host the website, but a special network password is required to view the site from the raspberry pi. 
+
+-Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques
+One phishing scheme I have experienced is when I got a call about the expired warranty on my vehicle, even though I have no vehicle. They wanted my insurance information, which I also did not have.
+
+
+## 5.5
+
+-When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in GitHub pages.
+
+    -Types of License
+	-Creative Commons: waives copyright interest in a work you’ve created and dedicates it to world public domain
+	-MIT License: allows to give away your software but they have to acknowledge you
+	-GPL License: More communist, you are free to give away, but others have to give away code for free too
+
+-Make a license for your personal and Team project. Document license you picked and why.
+   We picked the MIT license because we want other people to be able to utilize our code and build their own projects, but they just have to give us credit. With this license, other people recognize us for our work but they can still use our code to build unique things.
+   
+
+
 
 ## 5.4
 
