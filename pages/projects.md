@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 ## Week 2 Classy Functions
 
 Hack 1: Organize files, directories and menus for the first 3 weeks. 
