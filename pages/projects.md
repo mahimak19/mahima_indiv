@@ -1,4 +1,194 @@
-## TT1 Loops and Lists
+## Week 2 Classy Functions
+
+Hack 1: Organize files, directories and menus for the first 3 weeks. 
+-Replit python files organized by week, menu reflects the same
+```
+week0 = {
+    1: {
+        "display":"ship",
+        "exec":ship,
+        "type":"func"
+    },
+   
+    2: {
+        "display":"Swap ",
+        "exec":swap,
+        "type":"func"},
+    
+    0: {
+        "display": "Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
+week1 = {
+  1: {
+    "display": "Fibonacci",
+    "exec": fib,
+    "type": "func"
+  },
+  2: {
+    "display": "Lists & Loops",
+    "exec": ll,
+    "type": "func"
+  },
+  0: {
+    "display": "Quit",
+    "exec": quit,
+    "type": "func"
+  }
+}
+week2 = {
+    1: {
+        "display":"Factorial",
+        "exec":fac,
+        "type":"func"
+    },
+    2: {
+        "display":"Math Function: Factors",
+        "exec":driver,
+        "type":"func"
+    },
+    3: {
+        "display":"Factors No Class",
+        "exec":print_factors,
+        "type":"func"
+    },
+    0: {
+        "display":"Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
+
+mainMenu = {
+    1: {
+        "display": "Week 0",
+        "exec": week0,
+        "type": "submenu"
+    },
+    2: {
+        "display": "Week 1",
+        "exec": week1,
+        "type": "submenu"
+    },
+    3: {
+        "display": "Week 2",
+        "exec": week2,
+        "type": "submenu"
+    },
+
+    0: {
+        "display": "Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
+```
+
+Hack 2: Write Factorial function using classes, providing implementation of call.
+-create a class called Factorial, define an object, create 'fac' function with try and except
+
+```
+class Factorial:
+    def __init__(self):
+        self.factorial = 1
+
+        
+'''
+The call function/method is a special to Python, when implemented inside a class, this gives its
+ object the ability to behave like a regular Python function.
+Definition of call. The call method is defined inside the Python class. The method allows the 
+construct object to invoke this method using a "object_name()" notation. The "def call(self, n):" 
+has keyword "self" in the parameter list, this means that the object itself is part of this 
+functions properties. The parameter "n" means it is expecting a value to be passed, 
+in Factorial case it is for the Factorial of n - (n!).
+'''        
+def __call__(self, n):
+        if n == 1 or n == 0:
+            return 1
+        else:
+            # Compute the requested Fibonacci number
+            self.factorial = n * self(n - 1)
+        return self.factorial
+
+
+def fac():
+    # Make a fibonacci object
+    fact_of = Factorial()
+    n = input("Enter a number for factorial: ")
+    try:
+        n = int(n)
+        # Validate the value of n
+        if n < 0 or n > 99:
+            raise ValueError
+
+        print(f"Factorial  of {n}  is: ", fact_of(n))
+    except ValueError:
+        print(f'Positive integer number in range 2 to 99 is expected, got "{n}" Try again.')
+
+
+if __name__ == "__main__":
+  fac()
+```
+
+Hack 3: Select your own Math function. Write it in Imperative and OOP form. 
+
+Factor Function OOP Form:
+
+```
+class factors:
+    def __init__(self):
+        self.allfactors = []
+
+    ''' 
+   __call__ is a special function/method in Python, when implemented inside a class, this gives its instances 
+   (or objects) the ability to behave like a function. The __call__ method inside the  Python class allows 
+   instance to invoke this method using object like a function.  
+   This method has a n as a parameter which is used to calculate the factors of the number.
+
+    '''
+
+    def __call__(self,num):
+        for value in range(1, num + 1):
+            if num % value == 0:
+                self.allfactors.append(value)
+        return self.allfactors
+
+def driver():
+    # Make a factors object
+    while True:
+        fact = factors()
+        n = input("Enter the number to find factors: ")
+        try:
+            n = int(n)
+            # Validate the value of n
+            if n < 2 or n > 99:
+                raise ValueError
+            # Produces a list of factors for input
+            print(f"Factors of {n} are: ", fact(n))
+            break
+        except ValueError:
+            print(f'Positive integer number in range 2 to 99 is expected, got "{n}" Try again.')
+
+if __name__ == "__main__":
+    driver()
+```
+Imperative Form:
+
+```
+num = int(input("Type a number "))
+def print_factors(x):
+   print("The factors of",x,"are:")
+   for i in range(1, x + 1):
+       if x % i == 0:
+           print(i)
+
+print_factors(num)
+```
+
+
+## Week 1 Loops and Lists
 <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@MahimaKrovvidy/mahima_indiv-1?embed=true"></iframe>
 
 
@@ -83,7 +273,7 @@ for i in range(y):
 ```
 Using a recursive loop, we are able to print a series of numbers where the next number is the sum of the previous two numbers, except when x is less than or equal to 1. 
 
-## TT0 Python Menu Individual Task
+## Week 0 Python Menu Individual Task
 
 Making a Python Menu
 
