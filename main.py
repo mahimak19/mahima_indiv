@@ -1,121 +1,150 @@
+from week0.shipbetter import ship
+from week0.swap2 import swap
+
+
+from week1.fibonacci import fib
+from week1.loops import ll
+
+from week2.factorial import fac
+from week2.factormath import driver
+from week2.factornoclass import print_factors
 
 
 
-# menuy.py - function style menu
-# Imports typically listed at top
-# each import enables us to use logic that has been abstracted to other files and folders
-
-# Main list of [Prompts, Actions]
-# Two styles are supported to execute abstracted logic
-# 1. file names will be run by exec(open("filename.py").read())
-# 2. function references will be executed directly file.function()
-main_menu = [
-    ["swap", "swap2.py"],
-    ["ship", "ship.py"],
-    ["shipbetter", "shipbetter.py"],
-    ["loops", "loops.py"],
-    ["fibonacci", "fibonacci.py"]
+week0 = {
+    1: {
+        "display":"ship",
+        "exec":ship,
+        "type":"func"
+    },
+   
+    2: {
+        "display":"Swap ",
+        "exec":swap,
+        "type":"func"},
     
+    0: {
+        "display": "Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
+week1 = {
+  1: {
+    "display": "Fibonacci",
+    "exec": fib,
+    "type": "func"
+  },
+  2: {
+    "display": "Lists & Loops",
+    "exec": ll,
+    "type": "func"
+  },
+  0: {
+    "display": "Quit",
+    "exec": quit,
+    "type": "func"
+  }
+}
+week2 = {
+    1: {
+        "display":"Factorial",
+        "exec":fac,
+        "type":"func"
+    },
+    2: {
+        "display":"Math Function: Factors",
+        "exec":driver,
+        "type":"func"
+    },
+    3: {
+        "display":"Factors No Class",
+        "exec":print_factors,
+        "type":"func"
+    },
+    0: {
+        "display":"Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
 
-]
+mainMenu = {
+    1: {
+        "display": "Week 0",
+        "exec": week0,
+        "type": "submenu"
+    },
+    2: {
+        "display": "Week 1",
+        "exec": week1,
+        "type": "submenu"
+    },
+    3: {
+        "display": "Week 2",
+        "exec": week2,
+        "type": "submenu"
+    },
 
-# Submenu list of [Prompt, Action]
-# Works similarly to main_menu
-sub_menu = [
-    ["Recursion Fib",None],
-    ["GCD", None],
-    ["LCM", None],
-    ["Primes", None],
-]
-
-
-# Menu banner is typically defined by menu owner
-border = "=" * 25
-banner = f"\n{border}\nPlease Select An Option\n{border}"
-
-
-# def patterns_submenuc
-# using patterns_sub_menu list:
-# patterns_submenuc works similarly to menuc
-def patterns_submenuc():
-    title = "Class Submenu" + banner
-    m = questy.Menu(title, patterns_sub_menu)
-    m.menu()
-
-
-# def menu
-# using main_menu list:
-# 1. main menu and submenu reference are created [Prompts, Actions]
-# 2. menu_list is sent as parameter to menuy.menu function that has logic for menu control
-def menu():
-    title = "Function Menu" + banner
-    menu_list = main_menu.copy()
-    buildMenu(title, menu_list)
+    0: {
+        "display": "Quit",
+        "exec":quit,
+        "type":"func"
+    }
+}
 
 
+def buildMenu(menu):
+    for key,value in menu.items(): 
+        display = value["display"]
+        print(f"{key} ------ {display}") # each menu item is printed
+    print("What is your choice? (enter the number value) ") # user input promp
 
-# def submenu
-# using sub menu list above:
-# sub_menu works similarly to menu()
-def submenu():
-    title = "Function Submenu" + banner
-    buildMenu(title, sub_menu)
+def presentMenu(menu):
+    buildMenu(menu) #print out menu and take input
+    choice = int(input())
+    while choice not in menu: # ensure that choice is valid
+        choice = int(input("Please elect a valid item. "))
+    if (choice) in menu:
+        if menu[choice]["type"] == "func": #determine whether recursion is needed
+            menu[choice]["exec"]() #run function
 
-
-def patterns_submenu():
-    title = "Function Submenu" + banner
-    buildMenu(title, patterns_sub_menu)
-
-
-def buildMenu(banner, options):
-    # header for menu
-    print(banner)
-    # build a dictionary from options
-    prompts = {0: ["Exit", None]}
-    for op in options:
-        index = len(prompts)
-        prompts[index] = op
-
-    # print menu or dictionary
-    for key, value in prompts.items():
-        print(key, '->', value[0])
-
-    # get user choice
-    choice = input("Type your choice> ")
-
-    # validate choice and run
-    # execute selection
-    # convert to number
-    try:
-        choice = int(choice)
-        if choice == 0:
-            # stop
-            return
-        try:
-            # try as function
-            action = prompts.get(choice)[1]
-            action()
-        except TypeError:
-            try:  # try as playground style
-                exec(open(action).read())
-            except FileNotFoundError:
-                print(f"File not found!: {action}")
-            # end function try
-        # end prompts try
-    except ValueError:
-        # not a number error
-        print(f"Not a number: {choice}")
-    except UnboundLocalError:
-        # traps all other errors
-        print(f"Invalid choice: {choice}")
-    # end validation try
-
-    buildMenu(banner, options)  # recursion, start menu over again
-
-menu()
+        else:
+            presentMenu(menu[choice]["exec"]) #display submenu
 
 if __name__ == "__main__":
-    menu()
+  while True:
+    presentMenu(mainMenu)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
