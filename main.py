@@ -1,150 +1,106 @@
 from week0.shipbetter import ship
-from week0.swap2 import swap
+from week0.swap2 import swaptester
 
 
 from week1.fibonacci import fib
-from week1.loops import ll
+from week1.loops2 import for_loop
 
 from week2.factorial import fac
 from week2.factormath import driver
-from week2.factornoclass import print_factors
+from week2 import factornoclass
 
 
+main_menu = [
+  
+]
 
-week0 = {
-    1: {
-        "display":"ship",
-        "exec":ship,
-        "type":"func"
-    },
-   
-    2: {
-        "display":"Swap ",
-        "exec":swap,
-        "type":"func"},
-    
-    0: {
-        "display": "Quit",
-        "exec":quit,
-        "type":"func"
-    }
-}
-week1 = {
-  1: {
-    "display": "Fibonacci",
-    "exec": fib,
-    "type": "func"
-  },
-  2: {
-    "display": "Lists & Loops",
-    "exec": ll,
-    "type": "func"
-  },
-  0: {
-    "display": "Quit",
-    "exec": quit,
-    "type": "func"
-  }
-}
-week2 = {
-    1: {
-        "display":"Factorial",
-        "exec":fac,
-        "type":"func"
-    },
-    2: {
-        "display":"Math Function: Factors",
-        "exec":driver,
-        "type":"func"
-    },
-    3: {
-        "display":"Factors No Class",
-        "exec":print_factors,
-        "type":"func"
-    },
-    0: {
-        "display":"Quit",
-        "exec":quit,
-        "type":"func"
-    }
-}
+week0_sub_menu = [
+  ["Ship", ship],
+  ["Swap", swaptester],
+]
 
-mainMenu = {
-    1: {
-        "display": "Week 0",
-        "exec": week0,
-        "type": "submenu"
-    },
-    2: {
-        "display": "Week 1",
-        "exec": week1,
-        "type": "submenu"
-    },
-    3: {
-        "display": "Week 2",
-        "exec": week2,
-        "type": "submenu"
-    },
+week1_sub_menu = [
+  ["Fibonacci", fib], 
+  ["Loops", for_loop],
+]
 
-    0: {
-        "display": "Quit",
-        "exec":quit,
-        "type":"func"
-    }
-}
+week2_sub_menu = [
+  ["Factorial", fac],
+  ["Factor Math", driver],
+  ["Factor No Class", factornoclass.driver],
+]
+
+border = "======================="
+banner = f"\n{border}\nPlease Select An Option\n{border}"
 
 
-def buildMenu(menu):
-    for key,value in menu.items(): 
-        display = value["display"]
-        print(f"{key} ------ {display}") # each menu item is printed
-    print("What is your choice? (enter the number value) ") # user input promp
+def menu():
+    title = "Weekly Menu" + banner
+    menu_list = main_menu.copy()
+    menu_list.append(["Week 0", week0_submenu])
+    menu_list.append(["Week 1", week1_submenu])
+    menu_list.append(["Week 2", week2_submenu])
+    buildMenu(title, menu_list)
 
-def presentMenu(menu):
-    buildMenu(menu) #print out menu and take input
-    choice = int(input())
-    while choice not in menu: # ensure that choice is valid
-        choice = int(input("Please elect a valid item. "))
-    if (choice) in menu:
-        if menu[choice]["type"] == "func": #determine whether recursion is needed
-            menu[choice]["exec"]() #run function
 
-        else:
-            presentMenu(menu[choice]["exec"]) #display submenu
+def week0_submenu():
+    title = "Week 0 Submenu" + banner
+    buildMenu(title, week0_sub_menu)
+
+def week1_submenu():
+    title = "Week 1 Submenu" + banner
+    buildMenu(title, week1_sub_menu)
+
+def week2_submenu():
+    title = "Week 2 Submenu" + banner
+    buildMenu(title, week2_sub_menu)
+
+
+def buildMenu(banner, options):
+    # header for menu
+    print(banner)
+    # build a dictionary from options
+    prompts = {0: ["Exit", None]}
+    for op in options:
+        index = len(prompts)
+        prompts[index] = op
+
+    # print menu or dictionary
+    for key, value in prompts.items():
+        print(key, '- ', value[0])
+
+    # get user choice
+    choice = input("Type your choice: ")
+    print()
+    # validate choice and run
+    # execute selection
+    # convert to number
+    try:
+        choice = int(choice)
+        if choice == 0:
+            # stop
+            return
+        try:
+            # try as function
+            action = prompts.get(choice)[1]
+            action()
+        except TypeError:
+            try:  # try as playground style
+                exec(open(action).read())
+            except FileNotFoundError:
+                print(f"File not found!: {action}")
+            # end function try
+        # end prompts try
+    except ValueError:
+        # not a number error
+        print(f"Not a number: {choice}")
+    except UnboundLocalError:
+        # traps all other errors
+        print(f"Invalid choice: {choice}")
+    # end validation try
+    print()
+    buildMenu(banner, options)  # recursion, start menu over again
+
 
 if __name__ == "__main__":
-  while True:
-    presentMenu(mainMenu)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    menu()
