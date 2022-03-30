@@ -1,4 +1,3 @@
-
 def print_factors(x):
    print("The factors of",x,"are:")
    for i in range(1, x + 1):
