@@ -1,3 +1,5 @@
+{% include navigation.html %}
+
 # TPT Notes
 
 ## 5.6 Safe Computing
