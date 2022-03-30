@@ -1,5 +1,3 @@
-
-
 def swap (x,y):
     q = x
 # we set one of our variables to a temporary variable
@@ -8,7 +6,6 @@ def swap (x,y):
     y = q
 #set y equal to the temp
     return x,y
-
 
 
 def swaptester():
