@@ -1,5 +1,20 @@
 {% include navigation.html %}
 
+## Week 4 Accounts and Logins
+
+Analysis:
+
+Flaws in security:
+
+-The user is allowed to try and login an infinite number of times, and eventually, the user can use software to guess the login.
+-Multiple accounts: the program does not prevent the user from making multiple accounts under the same email, which needs to be prevented in order to make it secure
+-Forgot password option: in case user forgot password, they can use their email and perhaps a phone number to reset,
+-Need to verify the email, use two-factor authentication to verify that email is actually yours
+
+
+
+
+
 ## Week 2 Classy Functions
 
 Hack 1: Organize files, directories and menus for the first 3 weeks. 
