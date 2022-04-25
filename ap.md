@@ -1,5 +1,19 @@
 # AP Test Prep 
 
+## Practice Test #2
+
+### Q14: A file storage application allows users to save their files on cloud servers. A group of researchers gathered user data for the first eight years of the application’s existence. Some of the data are summarized in the following graphs. The line graph on the left shows the number of registered users each year. The line graph on the right shows the total amount of data stored by all users each year. The circle graph shows the distribution of file sizes currently stored by all users. Which of the following best describes the average amount of data stored per user for the first eight years of the application’s existence?
+
+Answer: A : Across all eight years, the average amount of data stored per user was about 10 GB.
+My answer: C: The average amount of data stored per user appears to increase by about 10 GB each year.
+Explanation: Correct. The two line graphs are roughly the same shape. Each value on the right line graph is about 10 times the corresponding value on the left line graph. Therefore, the average amount of data stored per user is about 10 GB.
+
+
+ 
+
+
+
+
 
 ## Practice Test #1 4/20
 
