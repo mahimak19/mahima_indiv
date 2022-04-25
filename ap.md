@@ -2,6 +2,8 @@
 
 ## Practice Test #2
 
+Score: 44/50
+
 ### Q14: A file storage application allows users to save their files on cloud servers. A group of researchers gathered user data for the first eight years of the application’s existence. Some of the data are summarized in the following graphs. The line graph on the left shows the number of registered users each year. The line graph on the right shows the total amount of data stored by all users each year. The circle graph shows the distribution of file sizes currently stored by all users. Which of the following best describes the average amount of data stored per user for the first eight years of the application’s existence?
 
 Answer: A : Across all eight years, the average amount of data stored per user was about 10 GB.
@@ -17,7 +19,7 @@ Explanation: Correct. The two line graphs are roughly the same shape. Each value
 
 ## Practice Test #1 4/20
 
-
+Score: 49/50
 
 
 ### Q4:  ASCII characters can also be represented by hexadecimal numbers. According to ASCII character encoding, which of the following letters is represented by the hexadecimal (base 16) number 56?
