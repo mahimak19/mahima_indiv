@@ -1,5 +1,12 @@
 # AP Test Prep 
 
+
+# Week 1 Reflection:
+
+This week I started reviewing Big Idea 1 and 2, and watched some of the AP Exam daily videos to help refresh my knowledge. I learned about collaboration and the fundamental principles of coding. I was able to understand it well and did the practice questions successfully
+
+
+
 ## Practice Test #2
 
 Score: 44/50
