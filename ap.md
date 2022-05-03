@@ -1,5 +1,34 @@
 # AP Test Prep 
 
+## Practice Test #3
+Score: 47/50
+
+### Q3
+Answer: II only
+My answer: I only
+Explanation: Correct. Algorithm I does not work correctly. In algorithm I, if two people are tied for the earliest birthday, they both sit down when they are eventually paired. Algorithm II works correctly. Because algorithm II allows both people to remain standing when there is a tie, a person with the earliest birthday is not eliminated. Algorithm II continues until all remaining people have the same birthday, which is the earliest birthday. Algorithm III does not work correctly. Algorithm III chooses the person(s) with the earliest day, disregarding the month. For example, algorithm III will incorrectly determine that a person born on February 1 has an earlier birthday than a person born on January 5.
+
+### Q18
+Answer: [1, 2, 3]
+My answer: [-1, 0, 1]
+Explanation: The procedure traverses this list and eventually encounters the positive value 1. At this point, the procedure returns true when it should return false because the list does not contain only positive values.
+
+### Q32 
+A computer program uses 4 bits to represent nonnegative integers. Which of the following statements describe a possible result when the program uses this number representation?
+
+I. The operation 4 plus 8 will result in an overflow error.
+
+II. The operation 7 plus 10 will result in an overflow error.
+
+III. The operation 12 plus 3 will result in an overflow error.
+
+Answer: II only
+My answer: II and III only
+Explanation: The operation 10 plus 7 causes an overflow error, but 12 plus 3 does not produce a result large enough to cause an overflow error.
+
+
+
+
 
 # Week 1 Reflection:
 
