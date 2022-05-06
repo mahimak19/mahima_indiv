@@ -1,5 +1,19 @@
 # AP Test Prep 
 
+## Practice Test #5
+Score: 23/25
+
+### Q9
+Answer: D (sorting data)
+My answer: C (searching through data)
+Explanation: relative time, not total
+
+### Q17
+Answer: B (Version II requires approximately 5 more minutes to execute than version I.)
+My answer: B (Version I requires approximately 5 more minutes to execute than version II.)
+Explanation:  Version I calls the GetPrediction procedure once for each element of idList, or four times total. Since each call requires 1 minute of execution time, version I requires approximately 4 minutes to execute. Version II calls the GetPrediction procedure twice for each element of idList, and then again in the final display statement. This results in the procedure being called nine times, requiring approximately 9 minutes of execution time.
+
+
 ## Practice Test #3
 Score: 47/50
 
